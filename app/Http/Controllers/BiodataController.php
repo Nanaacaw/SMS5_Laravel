@@ -8,6 +8,7 @@ class BiodataController extends Controller
 {
     public function index()
     {
+        //array asosisatif
         $content['biodatas'] =
             [
                 [
@@ -17,16 +18,16 @@ class BiodataController extends Controller
                     'alamat' => "Jln. Bekasi",
                 ],
                 [
-                    'nama' => "Leilaa",
+                    'nama' => "Anselma",
                     'jk' => "Perempuan",
                     'ttl' => "Majalengka, 25 Oktober 2005",
                     'alamat' => "Jln. Bogor",
                 ],
                 [
-                    'nama' => "Lulul",
+                    'nama' => "Vonzy",
                     'jk' => "Perempuan",
-                    'ttl' => "Bekasi, 25 Oktober 2005",
-                    'alamat' => "Jln. Bogor",
+                    'ttl' => "Bekasi, 25 Maret 2003",
+                    'alamat' => "Jln. Begal",
                 ],
             ];
         return view('content', $content);

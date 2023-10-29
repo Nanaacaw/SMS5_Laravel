@@ -12,8 +12,20 @@
             <th scope="col">Alamat</th>
         </tr>
     </thead>
+
+    {{-- foreach --}}
+    {{-- @foreach ($biodatas as $biodata)
+    <tr>
+        <td>{{$loop->iteration}}</td>
+        <td>{{$biodata['nama']}}</td>
+        <td>{{$biodata['jk']}}</td>
+        <td>{{$biodata['ttl']}}</td>
+        <td>{{$biodata['alamat']}}</td>
+    </tr>
+    @endforeach --}}
+
+    @forelse ($biodatas as $biodata)
     <tbody>
-        @foreach ($biodatas as $biodata)
         <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$biodata['nama']}}</td>
@@ -21,7 +33,12 @@
             <td>{{$biodata['ttl']}}</td>
             <td>{{$biodata['alamat']}}</td>
         </tr>
-        @endforeach
+
+        @empty
+        <h1>Data tidak ditemukan</h1>
+        @endforelse
     </tbody>
 </table>
+
+
 @endsection
