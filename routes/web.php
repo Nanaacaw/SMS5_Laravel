@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\boxController;
+use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/box', [boxController::class, 'index']);
+
+Route::get('/biodata', [BiodataController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
