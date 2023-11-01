@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('/content', [ContentController::class, 'index']);
+
+Route::get('/input', [FormController::class, 'create']);
+Route::post('/result', [FormController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
