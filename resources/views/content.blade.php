@@ -8,6 +8,7 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Jenis Kelamin</th>
+
             <th scope="col">TTL</th>
             <th scope="col">Alamat</th>
         </tr>
@@ -39,6 +40,5 @@
         @endforelse
     </tbody>
 </table>
-
 
 @endsection
